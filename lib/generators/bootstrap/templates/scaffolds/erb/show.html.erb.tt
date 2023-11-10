@@ -1,14 +1,22 @@
-<%- if options[:metatags] %>
-<h1><%%%= title('<%%= singular_table_name.titleize %>') %></h1>
-<%- else -%>
-<h1><%%= plural_table_name.titleize %></h1>
-<%- end -%>
+<div class="card">
+  <div class="card-header">
+    <%- if options[:metatags] %>
+    <h1><%%%= title('<%%= singular_table_name.titleize %>') %></h1>
+    <%- else -%>
+    <h1><%%= plural_table_name.titleize %></h1>
+    <%- end -%>
+  </div>
+  <div class="card-body">
+    
 
-<dl>
-<%% attributes.reject(&:password_digest?).each do |attribute| -%>
-  <dt><%%= attribute.human_name %>:</dt>
-  <dd><%%%= @<%%= singular_table_name %>.<%%= attribute.name %> %></dd>
-<%% end -%>
-</dl>
-<%%%= link_to 'Edit', edit_<%%= singular_table_name %>_path(@<%%= singular_table_name %>) %> |
-<%%%= link_to 'Back', <%%= index_helper %>_path %>
+    
+    <%% attributes.reject(&:password_digest?).each do |attribute| -%>
+      <b><%%= attribute.human_name %>:</b>
+     <%%%= @<%%= singular_table_name %>.<%%= attribute.name %> %> <br>
+    <%% end -%>
+    
+    <%%%= link_to 'Edit', edit_<%%= singular_table_name %>_path(@<%%= singular_table_name %>) %> |
+    <%%%= link_to 'Back', <%%= index_helper %>_path %>
+
+  </div>
+</div>  

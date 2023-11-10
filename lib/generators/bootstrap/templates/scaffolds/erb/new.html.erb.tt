@@ -1,9 +1,13 @@
-<%- if options[:metatags] %>
-<h1><%%%- title('New <%%= singular_table_name.titleize %>') %></h1>
-<%- else -%>
-<h1>New <%%= plural_table_name.titleize %></h1>
-<%- end -%>
+<div class="card">
+  <div class="card-header">
+    <%- if options[:metatags] %>
+    <h1><%%%- title('New <%%= singular_table_name.titleize %>') %></h1>
+    <%- else -%>
+    <h1>New <%%= plural_table_name.titleize %></h1>
+    <%- end -%>
+  </div>
+  <div class="card-body">
+    <%%%= render 'form', <%%= singular_table_name %>: @<%%= singular_table_name %> %> 
+  </div>
+</div>  
 
-<%%%= render 'form', <%%= singular_table_name %>: @<%%= singular_table_name %> %>
-
-<%%%= link_to 'Back', <%%= index_helper %>_path %>
