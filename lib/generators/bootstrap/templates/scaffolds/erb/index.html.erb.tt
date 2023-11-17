@@ -26,7 +26,7 @@
             <td class="actions">
               <%%%= link_to '<i class="bi bi-eye"></i> Show'.html_safe <%%= model_resource_name %>, class: 'btn btn-primary' %>
               <%%%= link_to '<i class="bi bi-pencil-fill"></i> Edit'.html_safe edit_<%%= singular_route_name %>_path(<%%= singular_table_name %>), class: 'btn btn-success' %>
-              <%%%= link_to '<i class="bi bi-trash"></i> Destroy'.html_safe ', <%%= model_resource_name %>, data: {
+              <%%%= link_to '<i class="bi bi-trash"></i> Destroy'.html_safe , <%%= model_resource_name %>, data: {
                         turbo_method: :delete,
                         turbo_confirm: "Are you sure?"
                       }, class: 'btn btn-danger' %>
