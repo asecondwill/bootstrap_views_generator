@@ -9,7 +9,7 @@
   </div>
 
   <div class="form-actions actions">
-    <%%= link_to 'Show', @<%= singular_table_name %> if f.object.persisited? %> &nbsp;     
+    <%%= link_to 'Show', @<%= singular_table_name %> if f.object.persisted? %> &nbsp;     
     <%%= link_to 'Cancel ', <%= index_helper %>_path %> &nbsp; 
     
     <%%= f.button :submit, class: 'btn-primary' %>
