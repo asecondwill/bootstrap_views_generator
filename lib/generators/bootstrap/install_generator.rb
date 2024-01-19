@@ -34,6 +34,9 @@ module Bootstrap
 
       class_option :skip_turbolinks,    type: :boolean, default: false,
                                         desc: 'Skip associating assets and views with turbolinks'
+      
+      class_option :ransack,    type: :boolean, default: false,
+                                        desc: 'show Ransack'                                  
 
       def copy_scaffold_views
         %w[edit index show new].each do |file|
