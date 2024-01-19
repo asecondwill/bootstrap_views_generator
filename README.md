@@ -102,9 +102,9 @@ gem 'meta-tags'
 
 ### Examples
 
-Generate bootstrap views with pagination enabled
+Generate bootstrap views with pagination and search enabled
 ```shell
-rails g bootstrap:install --pagination
+rails g bootstrap:install --pagination --ransack
 ```
 
 Generate bootstrap views with slim and using simple_form
